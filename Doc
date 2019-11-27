@@ -1,0 +1,33 @@
+1  : Aplicação da Criptografia
+
+A aplicação de criptografia esta relacionada a segurança da informação, e neste caso trata-se de um programa cliente-servidor no qual o cliente quer criptografar uma mensagem. A mensagem é enviada para o servidor, o que criptografa a mensagem e devolve-a criptografada. O inverso também ocorre, o cliente envia uma mensagem criptografada e o servidor devolve descriptografada.
+
+2 : Criptografia usando RMI
+
+Quando se desenvolve uma aplicação em Java RMI, alguns elementos básicos devem ser criados, tais como:
+
+
+· Uma interface que disponibilize os métodos no servidor.
+
+· Uma classe que fique localizada na JVM (Java Virtual Machine) do servidor e que implemente os métodos definidos na interface.
+
+· Classes que implementem o protocolo de comunicação (Skel e Stub)3 e que sejam responsáveis por fazer com que a chamada de um método no cliente seja passada ao servidor de maneira transparente, assim como fazer com que o servidor responda de maneira conveniente a essa chamada, passando de volta ao cliente o valor de retorno. Um programa cliente que invoque os métodos remotos do servidor.
+
+· Um serviço de nomes (rmiregistry) responsável por informar ao cliente onde está o servidor e que relacione corretamente a implementação deste ao stub do cliente.
+
+
+Depois compilar e executar o servidor e o cliente.
+
+Foi definida uma interface, a interface de Serviço, a classe que implementa essa interface, a classe Main e a classe Servente para utilizar as interfaces.
+
+3 : O usuário insere uma palavra e a função no servente conectada com o servidor criptografa e também descriptografa.
+
+
+4 : · criptografar ( String a ):inicia a declaração do método usado para que o servidor criptografe uma entrada de texto claro emitida pelo cliente, e a devolva ao cliente em texto cifrado. Esse método usa a criptografia simétrica com cifra de substituição de caracter, que substitui cada caracter por outro.  cria um vetor de char, sem definir o seu tamanho e cria uma variável char auxiliar. A linha 17, obtém a cadeia de caracteres e a coloca em um vetor de char com o mesmo tamanho da cadeia, separando cada caracter.
+
+A instrução for percorre o vetor de char procurando por um caracter especifico e quando o encontra o substitui. Ao final, o método retorna a saída na variável output.
+
+· descriptografar ( String a ): inicia a declaração do método usado para que o servidor descriptografe uma entrada de texto cifrada emitida pelo cliente, e a devolva ao cliente em texto legível. Esse método usa a criptografia simétrica com cifra de substituição de caracter, que substitui cada caracter por outro.  cria um vetor de char, sem definir o seu tamanho e cria uma variável char auxiliar. obtém a cadeia de caracteres e a coloca em um vetor de char com o mesmo tamanho da cadeia, separando cada caracter.
+
+
+
